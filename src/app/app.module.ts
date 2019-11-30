@@ -14,6 +14,7 @@ import {MatIconModule, MatCardModule} from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component'; 
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
   ],
   imports: [
     FormsModule,
+    MatTableModule,
     MatToolbarModule,
     MatCardModule,
     HttpClientModule,

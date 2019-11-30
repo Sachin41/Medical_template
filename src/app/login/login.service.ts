@@ -29,6 +29,7 @@ export class LoginService {
             let loggedInUser = this.userDetails.firstName + ' ' + this.userDetails.lastName;
             // Store User details in session storage to keep user logged in between page refreshes.
             this.storeDetailsInSessionStorage(loggedInUser);
+            console.log(this.userDetails);
             return this.userDetails;            
         }))
     }

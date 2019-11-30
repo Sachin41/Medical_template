@@ -44,14 +44,16 @@ export class LoginComponent implements OnInit {
   get f() { return this.loginForm.controls; }
     login() {
       this.user.rememberMe = true;
+      console.log(this.user);
+      
       this.loginservice.authenticate(this.user).subscribe(
         response => {
-          if (response.success == true) {
+          if (response.success == false) {
               // Get the user object who loggedin currently.
               this.loginservice.getAccountDetails().subscribe(result => {
                   this.userDetails = result;
                   console.log('post data', this.userDetails);
-                  this.router.navigate(['inbox']);
+                  this.router.navigate(['home']);
               });
           }
       },
@@ -61,6 +63,7 @@ export class LoginComponent implements OnInit {
         if("Error"+JSON.stringify(error.error.AuthenticationException)){
           this.erroMassege="Username and Password do not match!";
           console.log(this.erroMassege)
+          this.router.navigate(['home']);
         }
       })
   }
