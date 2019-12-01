@@ -8,14 +8,30 @@
   border-color: #C4C4C4 transparent transparent transparent;
   border-radius: 516%/100px 100px 0 0;
 }
-.thme{
-  font-family: Acumin Pro;
-font-style: normal;
-font-weight: normal;
-font-size: 13px;
-line-height: 16px;
+.status{
+    /* font-family: Acumin Pro; */
+    font-style: normal;
+    font-weight: bold;
+    /* font-size: 14px; */
+    /* line-height: 17px; */
+    display: flex;
+    align-items: center;
+    text-align: right;
+    text-transform: uppercase;
 
-color: #000000;
+
+}
+.thStyle{
+  font-weight: 300;
+    padding: 31px 0px 4px 16px!important;
+}
+.thme{
+  font-style: normal;
+  font-weight: 300;
+  // font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
 }
 tbody tr{
 left: 0%;
@@ -58,12 +74,6 @@ table td, .table th {
     padding: 1rem;
     vertical-align: top;
 }
-
-  .mat-row {
-    height: auto;
-  }
-  
-  .mat-cell {
-    padding: 8px 8px 8px 0;
-  }
-  
+.orderList{
+  font-weight: bold;
+}

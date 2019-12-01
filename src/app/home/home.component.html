@@ -2,7 +2,7 @@
 
 
   <div class="row">
-    <div class="col-lg-11">
+    <div class="col-sm-11">
       <mat-form-field style="width:100%; height: 71px;" appearance="outline">
           <div class="row">
             <div style="margin-left: 20px;" class="cole">
@@ -10,7 +10,7 @@
               
               
             </div>
-            <div class="col-lg-11">
+            <div class="col-sm-11">
               <input style="margin-top: 3px;font-family: Acumin Pro; font-style: normal;font-weight: 300;font-size: 18px;
                       line-height: 22px;" matInput (keyup)="applyFilter($event.target.value)" placeholder="Search" >
               </div>
@@ -18,7 +18,7 @@
         </mat-form-field>
         </div>
        
-        <div style="margin-left: 40px;">
+        <div class="col-sm-1" >
             <mat-icon fontSet="fab" style="float: right;">
                 <i style="font-size: 30px;padding: 11px;" class="fas fa-filter"></i>
               </mat-icon>
@@ -27,45 +27,49 @@
       <thead>
 
         <tr class="thme">
-          <th>Tray
-              <i class="fas fa-sort-up"></i>
+          <th class="thStyle" >Tray#
+              <i class="fas fa-arrow-up"></i>
+              <!-- <i class="fas fa-sort-up"></i> -->
           </th>
-          <th>Last</th>
-          <th>Traser</th>
-          <th>
-          
+          <th class="thStyle">Last
+              <i class="fas fa-arrow-up"></i>
           </th>
-          <th>Submited</th>
-          <th>Status</th>
+          <th class="thStyle" >Traser</th>
+         
+          <th class="thStyle" style="float: right;">Submited
+              <i class="fas fa-arrow-up"></i></th>
+          <th class="thStyle" style=" font-weight: 300;"><span>Status
+             <i class="fas fa-arrow-up"></i>
+          </span></th>
         </tr>
       </thead>
       <tbody>
 
-        <tr *ngFor="let user of orderList"> 
-          <td>{{user.orderid}}</td>
-          <td>{{user.patient}}</td>
+        <tr *ngFor="let user of orderList; let i=index"> 
+          <td class="orderList" style="width: 70px;">{{user.orderid}}</td>
+          <td class="orderList" style="width: 200px;">{{user.patient}}</td>
           <td>
               <div class="row">
-                  <div style="border: 1px solid #C4C4C4;
-                 height: 20px;
-          width: 20px;
-          border-radius: 12px;
+                  <div style="border: 1px solid #C4C4C4;height: 20px; width: 20px;border-radius: 12px;
                   background-color: #C4C4C4;;"></div>
                   <div class="box"></div>
-                  <div style="border: 1px solid #C4C4C4;
-                  height: 20px;
-          width: 20px;
-          border-radius: 12px;
+                  <div style="border: 1px solid #C4C4C4;height: 20px;width: 20px;border-radius: 12px;
                   background-color: #C4C4C4;;"></div>
                   </div>
           </td>
-          <td>{{user.frame_name}}</td>
-          <td>{{user.order_date}}</td>
+         
+          <!-- <td>{{user.frame_name}}</td> -->
+          <td class="orderList" style="float: right;">{{user.order_date}}</td>
+          <td class="orderList" style="width: 70px;"> 
+            <span class="status" [ngStyle]="{'color':getColor(user.status)}">
+                {{user.status}}
+            </span>
+          </td>
         </tr>
       </tbody>
     </table>
   </div>
-    <div class="row">
+    <!-- <div class="row">
        
   <div class="col-lg">
         <mat-form-field style="width:100%; height: 71px;" appearance="outline">
@@ -87,28 +91,27 @@
               <div class="col-lg" style="padding: 0px;">
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width:100%">
   
-                <!-- Position Column -->
-
+           
                
                 <ng-container matColumnDef="position">
                   <th mat-header-cell *matHeaderCellDef> No. </th>
                   <td mat-cell *matCellDef="let element"> {{element.orderid}} </td>
                 </ng-container>
               
-                <!-- Name Column -->
+            
                 <ng-container matColumnDef="name">
                   <th mat-header-cell *matHeaderCellDef> Name </th>
                   <td mat-cell *matCellDef="let element"> {{element.patient}} </td>
                 </ng-container>
               
-                <!-- Weight Column -->
+               
                 <ng-container matColumnDef="weight">
                   <th mat-header-cell *matHeaderCellDef> Weight </th>
                   <td mat-cell *matCellDef="let element"> {{element.frame_name}} </td>
                 </ng-container>
             
               
-                <!-- Symbol Column -->
+           
                 <ng-container matColumnDef="symbol">
                   <th mat-header-cell *matHeaderCellDef> Symbol </th>
                   <td mat-cell *matCellDef="let element"> {{element.order_date}} </td>
@@ -120,5 +123,5 @@
             </div>
   </div>
   
-  </div>
+  </div> -->
   </div>
