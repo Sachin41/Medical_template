@@ -1,39 +1,64 @@
 ::ng-deep.mat-form-field-appearance-outline .mat-form-field-infix {
     padding:4px 0px 10px 0px;
 }
-.me{
-left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.09);
-    border-radius: 5px;
+.box{
+  width: 21px;
+  height: 9px;
+  border: solid 3px #C4C4C4;
+  border-color: #C4C4C4 transparent transparent transparent;
+  border-radius: 516%/100px 100px 0 0;
 }
-.me{
-position: absolute;
-left: 33.44%;
-right: 64.24%;
-top: 33.33%;
-bottom: 28.07%;
+.thme{
+  font-family: Acumin Pro;
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 16px;
 
-background: #C4C4C4;
+color: #000000;
 }
+tbody tr{
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.09);
+border-radius: 5px;
+
+}
+td {
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+table { 
+  border-collapse: separate; 
+  border-spacing: 0 10px; 
+  margin-top: -10px; /* correct offset on first border spacing if desired */
+}
+td {
+  border: solid 1px white;
+  border-style: solid none;
+  padding: 10px;
+  background-color: #FFFFFF;
+}
+td:first-child {
+  border-left-style: solid;
+  border-top-left-radius: 10px; 
+  border-bottom-left-radius: 10px;
+}
+td:last-child {
+  border-right-style: solid;
+  border-bottom-right-radius: 10px; 
+  border-top-right-radius: 10px; 
+}
+
 table td, .table th {
-    padding: 1.5rem;
+    padding: 1rem;
     vertical-align: top;
-    border-top: 1px solid #dee2e6;
 }
-.this{
-    height: 60px;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.09);
-    border-radius: 46px;
-  }
+
   .mat-row {
     height: auto;
   }
