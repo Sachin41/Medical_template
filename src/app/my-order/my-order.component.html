@@ -1,22 +1,92 @@
-<div class="row">
- <div class="nav flex-column nav-pills col-md-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
-    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
-    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
-  </div>
-  <div class="tab-content col-m-8" id="v-pills-tabContent">
-    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-        section 1
+<!-- Nav tabs -->
+<div class="container-fluid pt-5">
+    <div class="row py-4">
+        <div class="col-sm-3 vertical-stepper" id="navbar-example3">
+            <ul class="nav flex-column nav-pills" id="myScrollspy">
+                    <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                        Patient and General
+                        <span>1</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                        Frame
+                        <span>2</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">
+                        Edger Settings
+                        <span>3</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">
+                        Rx
+                        <span>4</span></a>
+                    </li>
+                </ul>
+        </div>   
+          
+          <!-- Sections -->
+          <div class="col-sm-9 scrollspy my-order-content" data-spy="scroll" data-target="#myScrollspy" data-offset="0">
+            <div class="section active" id="home"  aria-labelledby="home-tab">
+                <h2 class="sub-heading text-center">Patient and General</h2>
+                <div class="mb-5">
+                    <label class="custom-label">Job Type:</label>
+                    <div class="button-row">
+                            <button mat-flat-button class="light-grey-bg">Finished</button>
+                            <button mat-flat-button class="light-grey-bg">Uncut</button>
+                            <button mat-flat-button class="light-grey-bg">Both</button>
+                            <button mat-flat-button class="light-grey-bg">Only Left</button>
+                            <button mat-flat-button class="light-grey-bg">Only Right</button>
+                            <button mat-flat-button class="light-grey-bg">Digital</button>
+                    </div>
+                </div>
+                <form>
+                        <div class="form-row">
+                          <div class="form-group col-md-4">
+                            <label class="custom-label" for="labSearch">Lab:</label>
+                            <input type="search" class="form-control form-control-lg" id="labSearch" >
+                            <a class="input-search"><img src="../../assets/images/search.png" width="18" alt=""></a>
+                            <a class="add-new"><img src="../../assets/images/plus.png" width="20" alt=""></a>
+                          </div>
+                          <div class="form-group col-md-2 offset-md-2">
+                            <label class="custom-label" for="accountNo">Bill to Account#</label>
+                            <input type="text" class="form-control form-control-lg" id="accountNo" >
+                          </div>
+                          <div class="form-group col-md-2">
+                                <label class="custom-label" for="shipTo">Ship to:</label>
+                                <input type="text" class="form-control form-control-lg" id="shipTo">
+                              </div>
+                        </div>
+
+                        <div class="form-row">
+                                <div class="form-group col-md-4">
+                                  <label class="custom-label" for="patient">Patient:</label>
+                                  <input type="search" class="form-control form-control-lg" id="patient" >
+                                  <a class="input-search"><img src="../../assets/images/search.png" width="18" alt=""></a>
+                                  <a class="add-new"><img src="../../assets/images/plus.png" width="20" alt=""></a>
+                                </div>
+                                <div class="form-group col-md-4 offset-md-2">
+                                  <label class="custom-label" for="trayNo">Tray#:</label>
+                                  <input type="text" class="form-control form-control-lg" id="trayNo" >
+                                </div>
+                        </div>
+                        <div class="form-row">
+                                <div class="form-group col-md-4">
+                                  <label class="custom-label" for="po">PO:</label>
+                                  <input type="text" class="form-control form-control-lg" id="po" >
+                                </div>
+                                <div class="form-group col-md-4 offset-md-2">
+                                  <label class="custom-label" for="enteredBy">Entered By:</label>
+                                  <input type="text" class="form-control form-control-lg" id="enteredBy" >
+                                </div>
+                        </div>
+                </form>
+
+            </div>
+            <div class="section" id="profile" role="tabpanel" aria-labelledby="profile-tab">Section 2</div>
+            <div class="section" id="messages" role="tabpanel" aria-labelledby="messages-tab">Section 3</div>
+            <div class="section" id="settings" role="tabpanel" aria-labelledby="settings-tab">Section 4</div>
+          </div>
     </div>
-    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-        section 2
-    </div>
-    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-        section 3
-    </div>
-    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-        section 4
-    </div>
-  </div>   
 </div>

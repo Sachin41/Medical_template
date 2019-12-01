@@ -1,0 +1,103 @@
+.light-grey-bg{    
+    background-color: #E4E4E4;
+}
+.custom-label{
+    font-weight: 500;
+    font-size: 14px;
+}
+.input-search{
+    position: absolute;
+    top: 42px;
+    left: 23px;
+    cursor:pointer;
+    opacity: 1;
+    transition: all 0.3s;
+}
+input{
+    &:focus ~ .input-search{
+        opacity: 0;
+    }
+    ~ .add-new{
+        position: absolute;
+        top: 42px;
+        right: -35px;
+        cursor:pointer;
+    }
+}
+.vertical-stepper{
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: fixed;
+        top: 85px;
+        width: 235px;
+        left: 50px;
+        border-right: 1px solid #808080;
+        &>li{
+            display: block;
+            position: relative;
+            height: 55px;
+            z-index: 0;            
+            &:last-child>a:before {display:none;}          
+            a{
+                color: #000;
+                &.active{
+                    color: #0038FF;
+                    background-color: transparent;
+                    border-right: 7px solid #0038FF;
+                    border-radius: 0px;
+                    margin-right: -4px;
+                }  
+                span{
+                    position: absolute;
+                    left: -17px;
+                    top: 9px;
+                    color: #fff;
+                    z-index: 9;
+                    font-size: 14px;
+                }             
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: 34px;
+                    border: 0.5px solid #bdc2ce;
+                    left: -14px;
+                    top: 32px;
+                    z-index: 3;
+                }
+               &:after {
+                content: "";
+                    position: absolute;
+                    border: 1px solid #bdc2ce;
+                    border-radius: 50%;
+                    top: 6px;
+                    left: -26px;
+                    width: 26px;
+                    height: 26px;
+                    background-color: #808080;
+                }
+            }
+            
+        }
+    }
+}
+.scrollspy .section{
+    height:75vh;
+}
+
+.my-order-content{
+    .sub-heading{
+        font-weight: 900;
+        font-size: 25px;
+        padding-right: 70px;
+    }
+    .button-row{
+        button{
+            margin-right: 12px;
+            min-width: 130px;
+            padding: 3px 16px;   
+        }
+    }
+}
