@@ -15,18 +15,24 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component'; 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTableModule} from '@angular/material/table';
+import { MyOrderComponent } from './my-order/my-order.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import {CdkStepperModule} from '@angular/cdk/stepper';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    MyOrderComponent
   ],
   imports: [
     FormsModule,
     MatTableModule,
     MatToolbarModule,
     MatCardModule,
+    MatStepperModule,
+    CdkStepperModule,
     HttpClientModule,
     MatIconModule,
     MatButtonModule,

@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuardService as AuthGuard } from './services/auth-guard.service';
 import { RoleGuardService as RoleGuard} from './services/role-guard.service';
 import { HomeComponent } from './home/home.component';
+import { MyOrderComponent } from './my-order/my-order.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,13 @@ const routes: Routes = [
   component: HomeComponent,
   data: {
     title: 'Home'
+  },
+},
+{
+  path: 'my_order',
+  component: MyOrderComponent,
+  data: {
+    title: 'my_order'
   },
 }
 ];
