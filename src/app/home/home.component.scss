@@ -1,12 +1,43 @@
 ::ng-deep.mat-form-field-appearance-outline .mat-form-field-infix {
     padding:4px 0px 10px 0px;
 }
+mat-toolbar{
+  background: #FFFFFF;
+box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.04);
+}
+.fabButton{
+  z-index:5; position : fixed;display : flex; 
+align-self : flex-end;bottom : 10%; margin-bottom : 68px; float: right;
+}
+.buttonFab{
+  background: #0038FF!important;
+
+}
+.newButton{
+  background: #0038FF!important;
+    border-radius: 30px!important;
+    color: white!important;
+    margin-left: 10px!important;
+    margin-right: 10px!important;
+}
 .box{
   width: 21px;
   height: 9px;
-  border: solid 3px #C4C4C4;
+  border: solid 1px #C4C4C4;
   border-color: #C4C4C4 transparent transparent transparent;
-  border-radius: 516%/100px 100px 0 0;
+  border-radius: 549%/100px 100px 0 0;
+  margin-top: 1px;
+}
+.glassIcon{
+  border: 1px solid #C4C4C4;
+  height: 20px;
+   width: 20px;
+   border-radius: 12px;
+   background-color: #C4C4C4;
+   margin-right: -5px;
+}
+.iconsecond{
+  margin-left: -5px;
 }
 .status{
     /* font-family: Acumin Pro; */
@@ -75,5 +106,5 @@ table td, .table th {
     vertical-align: top;
 }
 .orderList{
-  font-weight: bold;
+  font-weight: 500;
 }
