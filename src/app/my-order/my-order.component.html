@@ -88,6 +88,7 @@
         </form>
 
       </div>
+
       <div class="section" id="frameTracer" role="tabpanel" aria-labelledby="profile-tab">
         <h2 class="sub-heading text-center">Frame & Tracer</h2>
         <div class="mb-5">
@@ -104,27 +105,36 @@
             <div class="form-group col-md-4">
               <label class="custom-label" for="selectBrand">Frame Brand:</label>
               <select class="form-control form-control-lg custom-user-select" id="selectBrand">
-                  <option>Puma</option>
-                  <option>Rayben</option>
-                  <option>Vincent</option>
-                  <option>Crystal</option>
+                <option>Puma</option>
+                <option>Rayben</option>
+                <option>Vincent</option>
+                <option>Crystal</option>
               </select>
             </div>
             <div class="trace-item col-md-6 offset-md-1 mt-2">
-             <div class="row">
-                <div class="glassIcon" ></div>
-                <div class="box"></div>
-                <div class="glassIcon iconsecond"></div>
-             </div>
+              <div class="trace-content">
+                <div class="row ml-2 mb-2">
+                  <div class="glassIcon"></div>
+                  <div class="box"></div>
+                  <div class="glassIcon iconsecond"></div>
+                </div>
+                <div class="trace-frame">Trace Frame</div>
+              </div>
             </div>
             <div class="form-group col-md-4">
               <label class="custom-label" for="model">Model:</label>
               <select class="form-control form-control-lg custom-user-select" id="model">
-                  <option>Round</option>
-                  <option>Square</option>
-                  <option>Cat eye</option>
-                  <option>Rectangle</option>
+                <option>Round</option>
+                <option>Square</option>
+                <option>Cat eye</option>
+                <option>Rectangle</option>
               </select>
+            </div>
+            <div class="form-group import-frame col-md-6 offset-md-1 d-flex justify-content-center">
+              <div class="upload-btn-wrapper mt-4">
+                <span class="cusstom-import">or import file</span>
+                <input type="file" name="myfile" />
+              </div>
             </div>
           </div>
           <div class="form-row">
@@ -151,8 +161,167 @@
           </div>
         </form>
       </div>
-      <div class="section" id="messages" role="tabpanel" aria-labelledby="messages-tab">Section 3</div>
-      <div class="section" id="settings" role="tabpanel" aria-labelledby="settings-tab">Section 4</div>
+
+      <div class="section" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+        <h2 class="sub-heading text-center">EDGER SETTINGS</h2>
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label class="custom-label">Safety Bevel:</label>
+              <div class="button-row">
+                <button mat-flat-button class="light-grey-bg">Finished</button>
+                <button mat-flat-button class="light-grey-bg">Uncut</button>
+              </div>
+            </div>
+            <div class="col-md-4 offset-md-1">
+              <label class="custom-label">Polish:</label>
+              <div class="button-row">
+                <button mat-flat-button class="light-grey-bg">Finished</button>
+                <button mat-flat-button class="light-grey-bg">Uncut</button>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label class="custom-label" for="po">Bevel Type:</label>
+            </div>
+            <div class="form-group col-md-4 offset-md-1">
+              <label class="custom-label" for="bevelPosition">Bevel Position:</label>
+              <input type="text" class="form-control form-control-lg" id="bevelPosition">
+            </div>
+          </div>
+        </form>
+
+      </div>
+      <div class="section" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+        <h2 class="sub-heading text-center">RX INFO</h2>
+        <form>
+          <div class="form-row mb-3">
+            <div class="col-md-4">
+              <label class="custom-label">Distance RX:</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-row">
+                      <div class="col-1 custom-circle"><span>
+                        R
+                      </span></div>
+                    <div class="col">
+                      <label class="custom-label light">SPHERE:</label>
+                      <input type="text" class="form-control form-control-lg">
+                    </div>
+                    <div class="col">
+                      <label class="custom-label light">CYL:</label>
+                      <input type="text" class="form-control form-control-lg">
+                    </div>
+                    <div class="col">
+                      <label class="custom-label light">AXIS:</label>
+                      <input type="text" class="form-control form-control-lg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 offset-1">
+                <label class="custom-label">Near RX:</label>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-row">
+                        <div class="col-2 custom-circle"><span>
+                          R
+                        </span></div>
+                      <div class="col-7">
+                        <label class="custom-label light">ADD:</label>
+                        <input type="text" class="form-control form-control-lg">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 offset-1">
+                  <label class="custom-label">Fitting Measeurements:</label>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-row">
+                          <div class="col-2 custom-circle"><span>
+                            R
+                          </span></div>
+                        <div class="col">
+                          <label class="custom-label light">M.PD:</label>
+                          <input type="text" class="form-control form-control-lg">
+                        </div>
+                        <div class="col">
+                            <label class="custom-label light">FT HEIGHT:</label>
+                            <input type="text" class="form-control form-control-lg">
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <div class="form-row">
+              <div class="form-group col-md-4">
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-row">
+                        <div class="form-group col-1 custom-circle"><span class="L">
+                          L
+                        </span></div>
+                      <div class="form-group col">
+        
+                        <input type="text" class="form-control form-control-lg">
+                      </div>
+                      <div class="form-group col">
+        
+                        <input type="text" class="form-control form-control-lg">
+                      </div>
+                      <div class="form-group col">
+        
+                        <input type="text" class="form-control form-control-lg">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-md-2 offset-1">
+  
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-row">
+                          <div class="form-group col-2 custom-circle"><span class="L">
+                            L
+                          </span></div>
+                        <div class="form-group col-7">
+          
+                          <input type="text" class="form-control form-control-lg">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-md-3 offset-1">
+    
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-row">
+                            <div class="form-group col-2 custom-circle"><span class="L">
+                              L
+                            </span></div>
+                          <div class="form-group col">
+            
+                            <input type="text" class="form-control form-control-lg">
+                          </div>
+                          <div class="form-group col">
+              
+                              <input type="text" class="form-control form-control-lg">
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>

@@ -4,6 +4,10 @@
 .custom-label{
     font-weight: 500;
     font-size: 14px;
+    &.light{
+        font-size: 12px;
+        color: #8C8C8C;
+    }
 }
 .input-search{
     position: absolute;
@@ -106,6 +110,7 @@ select{
         font-weight: 900;
         font-size: 25px;
         padding-right: 70px;
+        margin-bottom: 25px;
     }
     .button-row{
         button{
@@ -116,7 +121,7 @@ select{
     }
     .trace-item{
         width: 100%;
-        height: 134px;
+        height: 150px;
         border: 1px dashed #0038ff;
         border-radius: 6px;
         display: flex;
@@ -132,14 +137,66 @@ select{
           }
         .glassIcon{
             border: 1px solid #C4C4C4;
-            height: 20px;
-             width: 20px;
-             border-radius: 12px;
-             background-color: #C4C4C4;
-             margin-right: -5px;
+            height: 27px;
+            width: 27px;
+            border-radius: 50%;
+            background-color: #C4C4C4;
+            margin-right: -5px;        
           }
           .iconsecond{
             margin-left: -5px;
           }
+          .trace-content{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            .trace-frame{
+                font-weight: 400;
+                font-size: 18px;
+            }
+          }
+    }
+    .custom-circle{
+        span{
+            position: absolute;
+            border: 1px solid #e4e4e4;
+            border-radius: 50%;
+            top: 41px;
+            left: 0px;
+            width: 26px;
+            height: 26px;
+            text-align: center;
+            background-color: #e4e4e4;
+            font-weight: normal;
+            font-size: 14px;
+            padding-top: 2.3px;
+            &.L{
+                top:10px;
+            }
+        }
     }
 }
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+      span {
+        color: #0038ff;
+        background-color: white;
+        border-radius: 8px;
+        text-decoration: underline;
+        font-weight: 500;
+        font-size: 14px;
+        cursor: pointer;
+  }
+  input[type=file] {
+    // font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+  }
+  
