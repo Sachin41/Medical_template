@@ -37,6 +37,27 @@ select{
     background-size: 15px 14px,4px 1px,4.5em 5.5em;
     background-repeat: no-repeat;
 }
+.custom-checkbox .custom-control-label{
+    font-weight: 500;
+    padding-left: 3px;
+    &::before {
+    border-radius: 0;
+    font-weight: 500;    
+    }
+}
+
+.custom-radio{
+    .custom-control-label{
+        &::before{
+         position: absolute;
+        top: 0rem;   
+        }    
+        &::after {
+            position: absolute;
+            top: 0rem;
+        }    
+    }
+}
 .vertical-stepper{
     ul {
         margin: 0;
@@ -97,7 +118,7 @@ select{
     }
 }
 .scrollspy .section{
-    min-height:75vh;
+    min-height:50vh;
     margin-bottom:100px;
 }
 
@@ -105,6 +126,7 @@ select{
     padding-right: 68px;
     .form-group {
         margin-bottom: 5rem;
+        position: relative;
     }
     .sub-heading{
         font-weight: 900;
@@ -177,6 +199,46 @@ select{
             }
         }
     }
+    .review-container{
+        .custom-label{
+            font-weight: 400;
+            font-size: 12px;
+            margin-bottom: 0;
+        }
+        p{
+            font-weight: 500;
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+        .review-side-box{
+        background: #F4F4F4;
+        border-radius: 5px;
+        .side-content{
+            border-bottom: 1px solid #00000017;
+        }
+    }       
+    }
+    .review-container-rx{
+        .custom-label{
+            font-size: 18px;
+            &.small{
+                font-size:12px;
+            }
+        }
+        .custom-circle span {
+            border: 0px solid #e4e4e4;
+            font-weight: 600;
+            font-size: 18px;
+            background-color: transparent;
+        }
+        .custom-badge{
+            padding: 12px 15px;
+            background: #f4f4f4;
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+
 }
 .upload-btn-wrapper {
     position: relative;
