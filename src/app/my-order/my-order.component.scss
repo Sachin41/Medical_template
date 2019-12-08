@@ -58,6 +58,13 @@ select{
         }    
     }
 }
+
+.submit-button{
+    background: #0038FF !important;
+    border-radius: 30px !important;
+    color: white !important;
+}
+
 .vertical-stepper{
     ul {
         margin: 0;
@@ -237,6 +244,9 @@ select{
             font-size: 16px;
             text-align: center;
         }
+    }
+    .view-submit-container{
+        margin-top: 90px;
     }
 
 }
