@@ -271,4 +271,86 @@ select{
     opacity: 0;
   }
   }
+  .lense{
+    background: #EEEEEE;
+    border-radius: 63.6287px;font-family: Acumin Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27.5724px;
+    line-height: 33px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #484848;
+      }
+      .lense span{
+        font-family: Acumin Pro; 
+        font-size: 20.5724px;
+        line-height: 33px;
+        color: #484848;
+      }
+      /* The popup form - hidden by default */
+      .form-popup {
+        display: none;
+        position: absolute;
+        bottom: 5;
+        right: 15px;
+        border: 3px solid #f1f1f1;
+        z-index: 9;
+        width: 347px;
+        height: 334px;
+        left: 4px;
+        background: #FFFFFF;
+        border-radius: 9px;
+      }
+      .button:hover{
+        color: white;
+        background-color: #0038FF;
+      }
+      .button {
+        background-color: #F1F1F1;
+        border: none;
+        color: black;
+        height: 40px;
+        width: 40px;
+        font-family: Acumin Pro;
+        font-size: 21.5625px;
+      }
+      .vL{
+        border: 1px solid #F1F1F1;
+        height: 275px;
+        position: absolute;
+        left: 66%;
+        margin-left: -3px;
+        top: 20px;
+      }
+      #myForm:focus{
+          display: block;
+      }
+      .lense:hover{
+        color: white;
+        background-color: #0038FF;
+      }
+      .lensespan{
+          font-size: 20px;
+          color: black;
+          text-decoration: none;
+      }
+      .lensespan:hover{
+        color: white!important;
+        font-size: 20px;
+        text-decoration: none;
+       }
+      .button1 {border-radius: 22px;}
+      /* Add styles to the form container */
+      .form-container {
+        padding: 10px;
+        background-color: white;
+      }
+    
+      /* Add some hover effects to buttons */
+      .form-container .btn:hover, .open-button:hover {
+        opacity: 1;
+      }
   

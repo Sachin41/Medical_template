@@ -18,7 +18,7 @@ import {MatTableModule} from '@angular/material/table';
 import { MyOrderComponent } from './my-order/my-order.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import {CdkStepperModule} from '@angular/cdk/stepper';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +35,7 @@ import {CdkStepperModule} from '@angular/cdk/stepper';
     CdkStepperModule,
     HttpClientModule,
     MatIconModule,
+    Ng2SearchPipeModule,
     MatButtonModule,
     ReactiveFormsModule,
     MatInputModule,

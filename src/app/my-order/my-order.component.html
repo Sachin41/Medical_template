@@ -220,7 +220,102 @@
                       </span></div>
                     <div class="col">
                       <label class="custom-label light">SPHERE:</label>
-                      <input type="text" class="form-control form-control-lg">
+                      <input type="text" class="form-control form-control-lg" (click)="focusFunction()" name="search" #search='ngModel' [(ngModel)]='searchlense'>
+
+                      <div class="form-popup" id="myForm" >
+                        <form action="/action_page.php" class="form-container">
+                          <div class="row">
+                            <div class="col-lg-7">
+                              <div class="row">
+                                <div class="col-sm-3">
+                                    <button (click)="number('7')" class="button button1">7</button>
+                                </div>
+                                <div class="col-sm-3">
+                                    <button (click)="number('8')" class="button button1">8</button>
+                                </div>
+                                <div class="col-sm-3">
+                                    <button (click)="number('9')" class="button button1">9</button>
+                                </div>
+                                <div class="col-sm-3" style="text-align: center;">
+                                    <button (click)="number('+')" class="button button1">
+                                        <i style=" margin-top:8px" class="material-icons">
+                                            add
+                                            </i>
+                                    </button>
+                                </div>
+                              </div>
+                              <div class="row" style="margin-top: 8px; margin-bottom: 8px;">
+                                  <div class="col-sm-3">
+                                      <button (click)="number('4')" class="button button1">4</button>
+                                  </div>
+                                  <div class="col-sm-3">
+                                      <button (click)="number('5')" class="button button1">5</button>
+                                  </div>
+                                  <div class="col-sm-3">
+                                      <button (click)="number('6')" class="button button1">6</button>
+                                  </div>
+                                  <div class="col-sm-3">
+                                      <button (click)="number('-')" class="button button1">
+                                        <div style="margin-top:-5px">
+                                        <i class="material-icons">
+                                          minimize
+                                          </i>
+                                        </div>
+                                      </button>
+                                  </div>
+                              </div>
+                              <div class="row" style="margin-bottom: 8px;">
+                                  <div class="col-sm-3">
+                                      <button (click)="number('1')" class="button button1">1</button>
+                                  </div>
+                                  <div class="col-sm-3">
+                                      <button (click)="number('2')" class="button button1">2</button>
+                                  </div>
+                                  <div class="col-sm-3">
+                                      <button (click)="number('3')" class="button button1">3</button>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <a href="#"> <i style="margin: 12px 0 0 7px;" (click)="number()" class="material-icons">
+                                        backspace
+                                        </i></a>
+                                         
+                                      
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-sm-3">
+                                    
+                                  </div>
+                                  <div class="col-sm-3">
+                                    
+                                  </div>
+                                  <div class="col-sm-3">
+                                      <button class="button button1">
+                                        <div style="margin-top: -11px;">
+                                          .
+                                        </div>
+                                        <!-- <span>.</span> -->
+                                      </button>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    
+                                   
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="vL"></div>
+                            
+                            <div style="margin-left: 38px;" class="col-lg-3">
+                                <div style="padding: 5px;" class="row" *ngFor="let lense of lense | filter:searchlense">
+                                    <div class="col-sm lense">
+                                      <a href="#" class="lensespan">{{lense}}</a></div>
+                                  </div>
+                            </div>
+                            
+                          </div>
+                          
+                        </form>
+                      </div>
                     </div>
                     <div class="col">
                       <label class="custom-label light">CYL:</label>
