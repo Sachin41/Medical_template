@@ -16,10 +16,10 @@ export class MyOrderComponent implements OnInit {
     '2':["-2.00","-2.25","-2.75","+2.00","+2.25","+2.75"]
     },
     {
-    '3':['3.00','3.25']
+    '3':['3.00','3.25',"-3.75","+3.00","+3.25","+3.75"]
     },
     {
-    '4':['4.00','-4.25']
+    '4':['4.00','-4.25',"-4.75","+4.00","+4.25","+4.75"]
     }
     ];
   searchlense
@@ -33,7 +33,6 @@ export class MyOrderComponent implements OnInit {
     document.getElementById("myForm").style.display = "block";
     console.log(this.lenseSize);
     
-   
   }
   
   focusOutFunction() {
