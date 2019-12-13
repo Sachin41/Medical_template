@@ -306,7 +306,7 @@
                             <div class="vL"></div>
                             
                             <div style="margin-left: 38px;" class="col-lg-3">
-                                <div style="padding: 5px;" class="row" *ngFor="let lense of lense | filter:searchlense">
+                                <div style="padding: 5px;" class="row" *ngFor="let lense of lenses | textFilter:searchlense">
                                     <div class="col-sm lense">
                                       <a href="#" class="lensespan">{{lense}}</a></div>
                                   </div>
