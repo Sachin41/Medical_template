@@ -20,13 +20,15 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {CdkStepperModule} from '@angular/cdk/stepper';
 import { CustomTextFilter } from '../app/pipes/textFIlter.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
     CustomTextFilter,
-    MyOrderComponent
+    MyOrderComponent,
+    OrderConfirmationComponent
   ],
   imports: [
     FormsModule,
