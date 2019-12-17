@@ -16,7 +16,6 @@ export class CustomTextFilter implements PipeTransform{
         return items.filter(function search(row) { // name the function so we can use recursion (thus we can't use an arrow function)
             return Object.keys(row).some((key) => { //
                 if(typeof row[key] === "string") {
-
                     filter =filter<0?Math.floor(filter*-1):Math.floor(filter); // if the current property is a string
                     return row[key].toLowerCase().indexOf(filter) > -1; // then check if it contains the search string
                 } else if(row[key] && typeof row[key] === "object") { // oterwise, if it's an object

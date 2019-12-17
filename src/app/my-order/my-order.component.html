@@ -220,7 +220,7 @@
                       </span></div>
                     <div class="col">
                       <label class="custom-label light">SPHERE:</label>
-                      <input type="text" class="form-control form-control-lg" (click)="focusFunction()" name="search" #search='ngModel' [(ngModel)]='searchlense'>
+                      <input type="text" class="form-control form-control-lg" (click)="focusFunction()" (input)="arrayFor($event)" name="search" #search='ngModel' [(ngModel)]='searchlense'>
 
                       <div class="form-popup" id="myForm" >
                         <form action="/action_page.php" class="form-container">
@@ -275,7 +275,7 @@
                                       <button (click)="number('3')" class="button button1">3</button>
                                   </div>
                                   <div class="col-sm-3">
-                                    <a href="#"> <i style="margin: 12px 0 0 7px;" (click)="number()" class="material-icons">
+                                    <a href=""> <i style="margin: 12px 0 0 7px;" (click)="number()" class="material-icons">
                                         backspace
                                         </i></a>
                                          
@@ -284,30 +284,33 @@
                               </div>
                               <div class="row">
                                   <div class="col-sm-3">
-                                    
-                                  </div>
-                                  <div class="col-sm-3">
-                                    
-                                  </div>
-                                  <div class="col-sm-3">
-                                      <button class="button button1">
-                                        <div style="margin-top: -11px;">
-                                          .
-                                        </div>
-                                        <!-- <span>.</span> -->
-                                      </button>
-                                  </div>
-                                  <div class="col-sm-3">
-                                    
                                    
                                   </div>
+                                  <div class="col-sm-3">
+                                    <button (click)="number('0')" class="button button1">0</button>
+                                  </div>
+                                  <div class="col-sm-3">
+                                      
+                                        <div style="margin-top: -11px;">
+                                          <button class="button button1" (click)="number('.')" class="button button1">.</button>
+                                          
+                                        </div>
+                                        <!-- <span>.</span> -->
+                                     
+                                  </div>
+                                 
+                              </div>
+                              <div class="row" style="margin-top: 80px;">
+                                <div class="col-sm"  style="text-align: left;">
+                                  <button  class="button button1" (click)="focusOutFunction()">ok</button>
+                                </div>
                               </div>
                             </div>
                             <div class="vL"></div>
                             
                             <div style="margin-left: 38px;" class="col-lg-3">
-                                <div style="padding: 5px;" class="row" *ngFor="let lense of lenses | textFilter:searchlense">
-                                    <div class="col-sm lense">
+                                <div style="padding: 5px;" class="row" *ngFor="let lense of value">
+                                    <div class="col-sm lense" style="margin-top: 4px; margin-bottom: 5px;">
                                       <a href="#" class="lensespan">{{lense}}</a></div>
                                   </div>
                             </div>

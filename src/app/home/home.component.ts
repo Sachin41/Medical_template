@@ -30,7 +30,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 export class HomeComponent implements OnInit {
   allListDetails
-  
+  searchlense
   color=['green','red','blue','pink']
   orderList=[{"orderid":"8246323","patient":"RUIZ,DIANA","frame_name":"224","order_date":"2019-10-24", "status":"SHIFTED"},
   {"orderid":"2722760","patient":"BOROUGHF,SUZAN","frame_name":"q4012","order_date":"2019-10-31", "status":"SHIFTED"},
