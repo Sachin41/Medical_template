@@ -1,4 +1,6 @@
 <!-- Nav tabs -->
+
+
 <div class="container-fluid pt-5">
   <div class="row py-4">
     <div class="col-sm-3 vertical-stepper" id="navbar-example3">
@@ -49,12 +51,12 @@
         <div class="mb-5">
           <label class="custom-label">Job Type:</label>
           <div class="button-row">
-            <button mat-flat-button class="light-grey-bg">Finished</button>
-            <button mat-flat-button class="light-grey-bg">Uncut</button>
-            <button mat-flat-button class="light-grey-bg">Both</button>
-            <button mat-flat-button class="light-grey-bg">Only Left</button>
-            <button mat-flat-button class="light-grey-bg">Only Right</button>
-            <button mat-flat-button class="light-grey-bg">Digital</button>
+            <button (click)="jobType('finished')" [class.myClass]="finished" mat-flat-button class="light-grey-bg">Finished</button>
+            <button (click)="jobType('uncut')" [class.myClass]="uncut" mat-flat-button class="light-grey-bg">Uncut</button>
+            <button (click)="jobType('both')" [class.myClass]="both" mat-flat-button class="light-grey-bg">Both</button>
+            <button (click)="jobType('onlyLeft')" [class.myClass]="onlyLeft" mat-flat-button class="light-grey-bg">Only Left</button>
+            <button (click)="jobType('onlyRight')" [class.myClass]="onlyRight" mat-flat-button class="light-grey-bg">Only Right</button>
+            <button (click)="jobType('digital')" [class.myClass]="digital" mat-flat-button class="light-grey-bg">Digital</button>
           </div>
         </div>
         <form>
@@ -220,7 +222,7 @@
                       </span></div>
                     <div class="col">
                       <label class="custom-label light">SPHERE:</label>
-                      <input type="text" class="form-control form-control-lg" (click)="focusFunction()" (input)="arrayFor($event)" name="search" #search='ngModel' [(ngModel)]='searchlense'>
+                      <input type="text" class="form-control form-control-lg" maxlength = "6" (click)="focusFunction()" (input)="arrayFor($event)" name="search" #search='ngModel' [(ngModel)]='searchlense'>
 
                       <div class="form-popup" id="myForm" >
                         <form action="/action_page.php" class="form-container">
@@ -275,9 +277,9 @@
                                       <button (click)="number('3')" class="button button1">3</button>
                                   </div>
                                   <div class="col-sm-3">
-                                    <a href=""> <i style="margin: 12px 0 0 7px;" (click)="number()" class="material-icons">
+                                    <button class="button button1"> <i style="margin: 8px 0 0 -3px;" (click)="number('clear')" class="material-icons">
                                         backspace
-                                        </i></a>
+                                        </i></button>
                                          
                                       
                                   </div>
@@ -291,11 +293,11 @@
                                   </div>
                                   <div class="col-sm-3">
                                       
-                                        <div style="margin-top: -11px;">
-                                          <button class="button button1" (click)="number('.')" class="button button1">.</button>
-                                          
-                                        </div>
-                                        <!-- <span>.</span> -->
+                                       
+                                          <button  (click)="number('.')" class="button button1">
+                                            <i style="font-size: 7px;margin-bottom: 14px;" class="fa fa-circle" aria-hidden="true"></i>
+                                          </button>
+                                        
                                      
                                   </div>
                                  
